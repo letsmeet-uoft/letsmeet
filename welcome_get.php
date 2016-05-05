@@ -2,7 +2,7 @@
 <body>
 
 <?php 
-	echo "Hello, ".$_GET["firstname"]." ".$_GET["lastname"]; 
+	echo "Hello, ".$_POST["firstname"]." ".$_POST["lastname"]; 
 ?> 
 
 </body>
