@@ -1,0 +1,14 @@
+#header {
+	background-color: lightblue;
+	color: black;
+	text-align: center;
+	padding: 5px;
+}
+#nav {
+	line-height: 20px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: right;
+	padding: 5px;
+}
