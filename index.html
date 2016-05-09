@@ -11,7 +11,7 @@
 <!--
   POPUP OPEN BUTTON script
 -->
-<script type="text/javascript" src= "scripts/popup.js"></script>
+<script type="text/javascript" src= "js/popup.js"></script>
 
 <body>
 <head>
@@ -21,38 +21,26 @@
 
 <h1> Let's Meet</h1>
 
-<a class = "btn" data-popup-open="popup-1" href="#"> OPEN</a>
-
-<div class= "popup" data-popup="popup-1">
-  <div class= "popup-inner">
-    <h2> popup </h2>
-    <p>hello</p>
-    <p><a data-popup-close= "popup-1" href = "#">close</a></p> 
-    <a class = "popup-close" data-popup-close="popup-1" href="#">x</a>
-  </div>
-</div>
-
-
 <ul>
   <li> <!-- SIGN UP BUTTON-->
     <a data-popup-open="popup-1" href="#Sign up">Sign up</a>
 
     <div class = "popup" data-popup= "popup-1">
       <div class= "popup-inner">
-        First name:<br>
-        <input type="text" name="firstname"><br>
-        Last name:<br>
-        <input type="text" name="lastname"><br>
-        User name:<br>
-        <input type="text" name="username"><br>
-        Password:<br>
-        <input type="password" name="psw"><br>
-        E-mail:<br>
-        <input type="email" name="email"><br>
-        Telephone:<br>
-        <input type="tel" usertel="usertel"><br>
-        
-        <input type = "submit">
+        <form name="SignUpButtonForm" action="php/signup.php" method="POST">
+          First name:<br>
+          <input type="text" name="firstname"><br>
+          Last name:<br>
+          <input type="text" name="lastname"><br>
+          User name:<br>
+          <input type="text" name="username"><br>
+          Password:<br>
+          <input type="password" name="psw"><br>
+          E-mail:<br>
+          <input type="email" name="email"><br>
+          Telephone:<br>
+          <input type="tel" usertel="usertel"><br>
+        </form>
 
         <!-- CLOSE -->
         <p><a data-popup-close= "popup-1" href = "#">close</a></p> 
@@ -63,7 +51,23 @@
   </li>
 
   <li><!-- LOGIN BUTTON -->
-    <a href="#Login">Login</a>
+        <a data-popup-open="popup-1" href="#Sign up">Login</a>
+
+    <div class = "popup" data-popup= "popup-1">
+      <div class= "popup-inner">
+        <form action="login.php" method="post">
+          User name:<br>
+          <input type="text" name="username"><br>
+          Password:<br>
+          <input type="password" name="psw"><br>
+        </form>
+
+        <!-- CLOSE -->
+        <p><a data-popup-close= "popup-1" href = "#">close</a></p> 
+        <a class = "popup-close" data-popup-close="popup-1" href="#">x</a>
+
+      </div>
+    </div>
   </li>
 </ul>
 
