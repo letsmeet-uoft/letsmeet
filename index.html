@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<script type="text/javascript" src= "scripts/popup.js"></script>
+
 <body>
 <head>
 	<link rel="stylesheet" href="css/style.css">
@@ -9,6 +13,16 @@
 
 <h1> Let's Meet</h1>
 
+<a class = "btm" data-popup-open="popup-1" href="#"> OPEN</a>
+
+<div class= "popup" data-popup="popup-1">
+  <div class= "popup-inner">
+    <h2> popup </h2>
+    <p>hello</p>
+    <p><a data-popup-close= "popup-1" href = "#">close</a></p> 
+    <a class = "popup-close" data-popup-close="popup-1" href="#">x</a>
+  </div>
+</div>
 <ul>
   <li><a href="#Sign up">Sign up</a></li>
   <li><a href="#Login">Login</a></li>
