@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
 
+
+<!--
+  JQuery
+-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
+
+<!--
+  POPUP OPEN BUTTON script
+-->
 <script type="text/javascript" src= "scripts/popup.js"></script>
 
 <body>
@@ -13,7 +21,7 @@
 
 <h1> Let's Meet</h1>
 
-<a class = "btm" data-popup-open="popup-1" href="#"> OPEN</a>
+<a class = "btn" data-popup-open="popup-1" href="#"> OPEN</a>
 
 <div class= "popup" data-popup="popup-1">
   <div class= "popup-inner">
@@ -23,9 +31,40 @@
     <a class = "popup-close" data-popup-close="popup-1" href="#">x</a>
   </div>
 </div>
+
+
 <ul>
-  <li><a href="#Sign up">Sign up</a></li>
-  <li><a href="#Login">Login</a></li>
+  <li> <!-- SIGN UP BUTTON-->
+    <a data-popup-open="popup-1" href="#Sign up">Sign up</a>
+
+    <div class = "popup" data-popup= "popup-1">
+      <div class= "popup-inner">
+        First name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname"><br>
+        User name:<br>
+        <input type="text" name="username"><br>
+        Password:<br>
+        <input type="password" name="psw"><br>
+        E-mail:<br>
+        <input type="email" name="email"><br>
+        Telephone:<br>
+        <input type="tel" usertel="usertel"><br>
+        
+        <input type = "submit">
+
+        <!-- CLOSE -->
+        <p><a data-popup-close= "popup-1" href = "#">close</a></p> 
+        <a class = "popup-close" data-popup-close="popup-1" href="#">x</a>
+
+      </div>
+    </div>
+  </li>
+
+  <li><!-- LOGIN BUTTON -->
+    <a href="#Login">Login</a>
+  </li>
 </ul>
 
 <form action ="welcome_get.php" method = "post">
