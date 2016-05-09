@@ -11,6 +11,7 @@
 
 /*inner*/
 .popup-inner {
+	
 	max-width: 700px;
 	width:90%;
 	padding:40px;
@@ -74,12 +75,23 @@
 	}
 
 	/* Change the link color on hover */
+	li p a:hover {
+	text-decoration: underline;
+    background-color: #555;
+    color: white;
+	}
+
 	li a:hover {
 	text-decoration: underline;
     background-color: #555;
     color: white;
 	}
 
+	li p a:not(:hover) {
+	text-decoration: underline;
+    background-color: #555;
+    color: white;
+	}
 
 	body {
 		background-image: url("backgroundImage.jpg");
@@ -93,5 +105,5 @@
 
 	form {
 		text-align: center;
-		color: white;
+		color: black;
 	}
