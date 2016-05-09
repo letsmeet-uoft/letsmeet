@@ -9,7 +9,7 @@
 
 
 <!--
-  POPUP OPEN BUTTON script
+  POPUP BUTTON script
 -->
 <script type="text/javascript" src= "js/popup.js"></script>
 
@@ -23,11 +23,11 @@
 
 <ul>
   <li> <!-- SIGN UP BUTTON-->
-    <a data-popup-open="popup-1" href="#Sign up">Sign up</a>
+    <a data-popup-open="sign-up-popup" href="#Sign up">Sign up</a>
 
-    <div class = "popup" data-popup= "popup-1">
+    <div class = "popup" data-popup= "sign-up-popup">
       <div class= "popup-inner">
-        <form name="SignUpButtonForm" action="php/signup.php" method="POST">
+        <form action="php/signup.php" method="POST">
           First name:<br>
           <input type="text" name="firstname"><br>
           Last name:<br>
@@ -43,17 +43,17 @@
         </form>
 
         <!-- CLOSE -->
-        <p><a data-popup-close= "popup-1" href = "#">close</a></p> 
-        <a class = "popup-close" data-popup-close="popup-1" href="#">x</a>
+        <p><a data-popup-close= "sign-up-popup" href = "#">close</a></p> 
+        <a class = "popup-close" data-popup-close="sign-up-popup" href="#">x</a>
 
       </div>
     </div>
   </li>
 
   <li><!-- LOGIN BUTTON -->
-        <a data-popup-open="popup-1" href="#Sign up">Login</a>
+        <a data-popup-open="login-popup" href="#Sign up">Login</a>
 
-    <div class = "popup" data-popup= "popup-1">
+    <div class = "popup" data-popup= "login-popup">
       <div class= "popup-inner">
         <form action="login.php" method="post">
           User name:<br>
@@ -63,8 +63,8 @@
         </form>
 
         <!-- CLOSE -->
-        <p><a data-popup-close= "popup-1" href = "#">close</a></p> 
-        <a class = "popup-close" data-popup-close="popup-1" href="#">x</a>
+        <p><a data-popup-close= "login-popup" href = "#">close</a></p> 
+        <a class = "popup-close" data-popup-close="login-popup" href="#">x</a>
 
       </div>
     </div>
