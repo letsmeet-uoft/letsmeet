@@ -4,6 +4,7 @@
 	height:100%;
 	display:none;
 	position:fixed;
+	color:black;
 	top:0px;
 	left:0px;
 	background: rgba(0,0,0,0.75);
@@ -40,14 +41,18 @@
 	background:rgba(0,0,0,0.8);
 	font-family: Arial, Sans-Serif;
 	font-size:20px;
-	test-align:center;
+	text-align:center;
 	line-height: 100%;
-	color:#f1f1f1;
+	color:black;
+}
+
+.inputForms{
+	color:black;
 }
 
 .popup-close:hover{
-	-webkit-transform:translate(50%, -50%) rotate(180deg);
-	transform: translate(50%, -50%) rotate(180deg);
+	-webkit-transform:translate(50%, -50%);
+	transform: translate(50%, -50%);
 	background: rgba(0,0,0,1);
 	text-decoration: none;
 }
@@ -95,3 +100,5 @@
 		text-align: center;
 		color: white;
 	}
+
+	
