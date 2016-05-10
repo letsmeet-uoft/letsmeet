@@ -6,23 +6,25 @@
 		$user = 'php_user';
 		$password = 'fprs2016';
 
-		$connection = mysql_connect($host, $user, $password);
+		global $connection = mysql_connect($host, $user, $password);
 
 		if (!$connection){
 			die('Could not connect: '.mysql_error());
 		}
 
+		echo 'connected';
 		return $connection;
 	}
 
 	#disconnects to the database being pointed to
-	function disconnect($connection){
+	function disconnect(){
 		mysql_close($connection);
 		echo 'closed successfully';
 	}
 
 	#adds a user to the users database if they are not already in there
 	function register_user(){
+		echo 'registered';
 	}
 
 	#returns a user from the users database
