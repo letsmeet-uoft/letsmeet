@@ -28,7 +28,7 @@
 	}
 
 	#adds a user to the users database if they are not already in there
-	function register_user($firstname, $lastname, $email, $password){
+	function register_user($connection, $firstname, $lastname, $email, $password){
 
 		$sql = "INSERT INTO userinfo (firstname, lastname, email, pass)
 					VALUES (".$firstname.", ".$lastname.", ".$email.", "
