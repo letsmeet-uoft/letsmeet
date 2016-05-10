@@ -2,14 +2,19 @@
 
 	#connects to the users database
 	function connect_to_users_database(){
+
+		##amazon rds server 
 		$host = 'letsmeetdb.cvtdf8obhuka.us-west-2.rds.amazonaws.com';
+		#php user
 		$user = 'php_user';
+		#php_user's password
 		$password = 'fprs2016';
+		$dbname = 'letsmeetusers';
 
-		$connection = mysql_connect($host, $user, $password);
+		$connection = new mysqli($host, $user, $password, $dbname);
 
-		if (!$connection){
-			die('Could not connect: '.mysql_error());
+		if ($connection->connect_error){
+			die('Could not connect: '. $connection->connect_error());
 		}
 
 		echo 'connected';
@@ -18,7 +23,7 @@
 
 	#disconnects to the database being pointed to
 	function disconnect($connection){
-		mysql_close($connection);
+		$connection->close();
 		echo 'closed successfully';
 	}
 
