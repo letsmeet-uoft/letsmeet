@@ -34,7 +34,7 @@
 					VALUES (".$firstname.", ".$lastname.", ".$email.", "
 					.$password.")";
 		if ($connection->query($sql) === TRUE){
-			echo "registered"
+			echo "registered";
 		}
 		else{
 			echo "error ".$sql."<br>".$connection->error();
