@@ -6,7 +6,7 @@
 		$user = 'php_user';
 		$password = 'fprs2016';
 
-		global $connection = mysql_connect($host, $user, $password);
+		$connection = mysql_connect($host, $user, $password);
 
 		if (!$connection){
 			die('Could not connect: '.mysql_error());
@@ -17,7 +17,7 @@
 	}
 
 	#disconnects to the database being pointed to
-	function disconnect(){
+	function disconnect($connection){
 		mysql_close($connection);
 		echo 'closed successfully';
 	}
