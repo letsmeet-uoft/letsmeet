@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<body>
+<body onload="updateTime()">
 <head>
 	<link rel="stylesheet" href="css/style.css">
   <title>Let's Meet</title>
@@ -29,6 +29,24 @@ function myFunction(value, useDaylightTime) {
 	document.getElementById("demo").innerHTML = q;
 	//document.getElementById("demo1").innerHTML = q;
 	convertTimeZone2to1(tz1, tz2);
+	return 0;
+}
+
+Date.prototype.isValid = function () {
+	return this.getTime() === this.getTime();
+}
+
+function updateTime(){
+	var currentDate = new Date (document.getElementById("demo").innerHTML);
+
+	//increment the time by one second
+	var updatedDate = new Date();
+	updatedDate.setTime(currentDate.getTime() + 1000);
+
+	document.getElementById("demo").innerHTML = updatedDate;
+	//call back in 1000ms so updates the time every secong
+	setTimeout(updateTime, 1000);
+
 	return 0;
 }
 
