@@ -26,6 +26,8 @@ function myFunction(value, useDaylightTime) {
 	var q = new Date();
 	tz1 = value +useDaylightTime;
 	q.setTime(d);
+
+	document.getElementById("demo").style.visibility = "visible";
 	document.getElementById("demo").innerHTML = q;
 	//document.getElementById("demo1").innerHTML = q;
 	convertTimeZone2to1(tz1, tz2);
@@ -39,6 +41,12 @@ Date.prototype.isValid = function () {
 function updateTime(){
 	var currentDate = new Date (document.getElementById("demo").innerHTML);
 
+	if (!currentDate.isValid()){
+		document.getElementById("demo").style.visibility = "hidden";
+	}
+	else{
+		document.getElementById("demo").style.visibility = "visible";
+	}
 	//increment the time by one second
 	var updatedDate = new Date();
 	updatedDate.setTime(currentDate.getTime() + 1000);
@@ -90,6 +98,7 @@ function myFunction1(value, useDaylightTime) {
 	tz2 = value + useDaylightTime;
 	q.setTime(d);
 	//document.getElementById("demo").innerHTML = q;
+
 	document.getElementById("demo1").innerHTML = q;
 	return 0;
 }
