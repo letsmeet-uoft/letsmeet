@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/etline-font.css">
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/signup_style.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top">
@@ -294,12 +295,12 @@
                 <div class="col-md-6 col-md-offset-3">
                     <h3>Get started with Sedna, absolutely free</h3>
                     <p>Grab your copy today, exclusively from Codrops</p>
-                    <form class="signup-form" action="signup.html" method="POST" role="form">
+                    <form class="signup-form" action="signup.php" method="POST" role="form">
                         <div class="form-input-group">
-                            <i class="fa fa-envelope"></i><input type="text" class="" placeholder="Enter your email" required>
+                            <i class="fa fa-envelope"></i><input type="text" name="username" class="" placeholder="Enter your email" required>
                         </div>
                         <div class="form-input-group">
-                            <i class="fa fa-lock"></i><input type="text" class="" placeholder="Enter your password" required>
+                            <i class="fa fa-lock"></i><input type="psw" class="" name="psw" placeholder="Enter your password" required>
                         </div>
                         <button type="submit" class="btn-fill sign-up-btn">Sign up for free</button>
                     </form>
