@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/signup_style.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/animation_scripts.js"></script>
 </head>
 <body id="top">
     <!--[if lt IE 8]>
@@ -44,7 +47,7 @@
                             </ul>
                             <ul class="member-actions">
                                 <li><!-- LOGIN BUTTON -->
-                                    <a data-popup-open="login-popup" href="#Sign up">Login</a>
+                                    <a class="login" data-popup-open="login-popup" href="#Sign up">Login</a>
                                     <div class = "popup" data-popup= "login-popup">
                                       <div class= "popup-inner">
                                         <form action="login.php" method="post">
@@ -52,6 +55,7 @@
                                           <input type="text" name="username"><br>
                                           Password:<br>
                                           <input type="password" name="psw"><br>
+                                          <input type="submit" value="Log in">
                                         </form>
                                         <!-- CLOSE -->
                                         <p><a data-popup-close= "login-popup" href = "#">close</a></p> 
