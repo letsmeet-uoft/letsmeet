@@ -43,7 +43,22 @@
                                 <!--<li><a href="#download">Download</a></li>-->
                             </ul>
                             <ul class="member-actions">
-                                <li><a href="#download" class="login">Log in</a></li>
+                                <li><!-- LOGIN BUTTON -->
+                                    <a data-popup-open="login-popup" href="#Sign up">Login</a>
+                                    <div class = "popup" data-popup= "login-popup">
+                                      <div class= "popup-inner">
+                                        <form action="login.php" method="post">
+                                          User name:<br>
+                                          <input type="text" name="username"><br>
+                                          Password:<br>
+                                          <input type="password" name="psw"><br>
+                                        </form>
+                                        <!-- CLOSE -->
+                                        <p><a data-popup-close= "login-popup" href = "#">close</a></p> 
+                                        <a class = "popup-close" data-popup-close="login-popup" href="#">x</a>
+                                      </div>
+                                    </div>
+                                 </li>
                                 <li><a href="#download" class="btn-white btn-small">Sign up</a></li>
                             </ul>
                         </nav>
