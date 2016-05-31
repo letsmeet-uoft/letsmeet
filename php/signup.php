@@ -10,5 +10,5 @@
 
 
 	echo "<p> Hello " . $username . " @ " . $companyname . "</p>";
-	echo "<p> Redirecting to main page in 5 seconds </p>"
+	echo "<p> Redirecting to main page</p>"
 ?>

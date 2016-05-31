@@ -34,6 +34,7 @@
 
     <script src = "../js/time_scripts.js"></script>
     <script src="../js/animation_scripts.js"></script>
+    <script src="../js/load_cal.js"></script>
 
 
 </head>
@@ -284,6 +285,8 @@
             </select>
     </div>
 </div>
+
+<div id="calendar_image"></div>
 
 </body>
 </html>
