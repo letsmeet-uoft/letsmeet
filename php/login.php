@@ -1,32 +1,38 @@
+<?php
+    //vars
+    $username = $_POST["username"];
+
+?>
+
 <!DOCTYPE html>
 <html>
 
 <body onload="updateTime()">
 <head>
-    <link rel="stylesheet" href="css/style.css">
   <title>Let's Meet</title>
   <meta charset="utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ERrrrrrrrr</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/etline-font.css">
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-    <script src = "js/time_scripts.js"></script>
+    <script src = "../js/time_scripts.js"></script>
+    <script src="../js/animation_scripts.js"></script>
 
 </head>
 
@@ -34,13 +40,30 @@
         <section class="navigation">
             <header>
                 <div class="header-content">
-                    <div class="logo"><a href="#"><img src="img/sedna-logo.png" alt="Sedna logo"></a></div>
+                    <div class="logo"><a href="#"><img src="../img/sedna-logo.png" alt="Sedna logo"></a></div>
                     <div class="header-nav">
                         <nav>
                                 <!--<li><a href="#download">Download</a></li>-->
                             </ul>
                             <ul class="member-actions">
-                                <li><a href="#download" class="btn-white btn-small"><?php echo $_POST["username"] ?></a></li>
+                                <li><!-- LOGIN BUTTON -->
+                                    <a class="login" data-popup-open="login-popup" href="#Sign up">Login</a>
+                                    <div class = "popup" data-popup= "login-popup">
+                                      <div class= "popup-inner">
+                                        <form action="php/login.php" method="post">
+                                          User name:<br>
+                                          <input type="text" name="username"><br>
+                                          Password:<br>
+                                          <input type="password" name="psw"><br>
+                                          <input type="submit" value="Log in">
+                                        </form>
+                                        <!-- CLOSE -->
+                                        <p><a data-popup-close= "login-popup" href = "#">close</a></p> 
+                                        <a class = "popup-close" data-popup-close="login-popup" href="#">x</a>
+                                      </div>
+                                    </div>
+                                 </li>
+
                             </ul>
                         </nav>
                     </div>
@@ -54,7 +77,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="hero-content text-center">
-                        <h1>Welcome to Let's Meet, <?php echo $_POST["username"]; ?></h1>
+                        <h1>Welcome to Let's Meet, <?php echo $username; ?></h1>
                         <p class="intro">Please pick your time zone from the list below</p>
                     </div>
                 </div>
