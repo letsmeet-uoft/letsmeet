@@ -7,7 +7,6 @@
 <!DOCTYPE html>
 <html>
 
-<body onload="updateTime()">
 <head>
   <title>Let's Meet</title>
   <meta charset="utf-8">
@@ -31,60 +30,71 @@
     <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
     <script src = "../js/time_scripts.js"></script>
     <script src="../js/animation_scripts.js"></script>
 
+
 </head>
 
+
+
+<body onload="updateTime()">
+
 <section class="hero">
-        <section class="navigation">
-            <header>
-                <div class="header-content">
-                    <div class="logo"><a href="#"><img src="../img/sedna-logo.png" alt="Sedna logo"></a></div>
-                    <div class="header-nav">
-                        <nav>
-                                <!--<li><a href="#download">Download</a></li>-->
-                            </ul>
-                            <ul class="member-actions">
-                                <li><!-- LOGIN BUTTON -->
-                                    <a class="login" data-popup-open="login-popup" href="#Sign up">Login</a>
-                                    <div class = "popup" data-popup= "login-popup">
-                                      <div class= "popup-inner">
-                                        <form action="php/login.php" method="post">
-                                          User name:<br>
-                                          <input type="text" name="username"><br>
-                                          Password:<br>
-                                          <input type="password" name="psw"><br>
-                                          <input type="submit" value="Log in">
-                                        </form>
-                                        <!-- CLOSE -->
-                                        <p><a data-popup-close= "login-popup" href = "#">close</a></p> 
-                                        <a class = "popup-close" data-popup-close="login-popup" href="#">x</a>
-                                      </div>
+    <section class="navigation">
+        <header>
+            <div class="header-content">
+                <div class="logo"><a href="#"><img src="../img/sedna-logo.png" alt="Let's Meet Logo"></a></div>
+                <div class="header-nav">
+                    <nav>
+                        <ul class="member-actions">
+                            <li><!-- LOGIN BUTTON -->
+                                <a class="login" data-popup-open="login-popup" href="#Sign up"><?php echo $username?></a>
+                                <div class = "popup" data-popup= "login-popup">
+                                  <div class= "popup-inner">
+                                    
+                                    <!-- card -->
+
+                                    <div class="w3-card-4">
+
+                                    <footer class="w3-container w3-blue">
+                                      <h1><?php echo $username?></h1>
+                                    </footer>
+
+                                    <div class="w3-container">
+                                      <p>Meetings this week:</p>
+                                      <?php
+                                        //make a list of all the meetings
+                                        /*
+                                            for meeting : meeitings
+                                                echo <li> meeting </li>
+                                        */
+                                      ?>
                                     </div>
-                                 </li>
 
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="navicon">
-                        <a class="nav-toggle" href="#"><span></span></a>
-                    </div>
+                                    <footer class="w3-container w3-blue">
+                                      <h5>Your Company Name here</h5>
+                                    </footer>
+
+                                    </div>
+
+                                    <!-- CLOSE -->
+                                    <p><a data-popup-close= "login-popup" href = "#">close</a></p> 
+                                    <a class = "popup-close" data-popup-close="login-popup" href="#">x</a>
+                                  </div>
+                                </div>
+                             </li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
-
-            <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="hero-content text-center">
-                        <h1>Welcome to Let's Meet, <?php echo $username; ?></h1>
-                        <p class="intro">Please pick your time zone from the list below</p>
-                    </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#"><span></span></a>
                 </div>
             </div>
-        </div>
-
-        </section>
+        </header>
+    </section>
 </section>
 
 <div class="container">
@@ -274,25 +284,6 @@
             </select>
     </div>
 </div>
-
-
-
-<script type="text/javascript">
-
-<!--
-    1.) get UTC time for both the time zones
-    2.) convert from one timezone to the other
-    3.)  
--->
-<ul>
-  <li><a href="pages/Signup.html">Sign up</a></li>
-  <li><a href="pages/Login.html">Login</a></li>
-</ul>
-
-<!--https://www.facebook.com/-->
-<!-- 
-    <p style="color:red;"> <em>Parth, Fyyaz, Ramya, Slesha.</em> </p>
- -->
 
 </body>
 </html>
