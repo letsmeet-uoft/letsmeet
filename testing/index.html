@@ -189,7 +189,7 @@
 
 
 <script type="text/javascript">
-function convertTimeZone2to1(valueTimeZone1, valueTimeZone2, name1, name2) {
+function convertTimeZone2to1(valueTimeZone1, valueTimeZone2, name1, name2, starttz1 , endtz1, starttz2 , endtz2) {
 	// if timezone1 is -4 and timezone2 is -11
 // if (valueTimeZone1 === undefined || valueTimeZone2 === undefined){
 // 	return 0;
@@ -226,14 +226,21 @@ function convertTimeZone2to1(valueTimeZone1, valueTimeZone2, name1, name2) {
 		var final = q.getHours()+1;
 		if (final >= 24){
 			final=0;
+		} 
+		if (starttz1 === undefined || starttz2 === undefined ||endtz1 === undefined ||endtz2 === undefined )
+		{
+		starttz1 = 9;
+		endtz1   = 17;
+		starttz2 = 9;
+		endtz2   = 17;
 		}
-
-		if (i > 8 && i < 18 && final > 8 && final < 18){
-			console.log(i +" <---MATCH----> "+ final);			
+		if (i > starttz1-1 && i < endtz1+1 && final > starttz2-1 && final < endtz2+1){
+			console.log(i +" <---MATCH---> "+ final);			
+			textTime = ""+ i + " to " + final;
 		}
 		else{
-		console.log(i +" <------------> "+ final);
-	}
+		console.log(i +" <-----------> "+ final);
+		}
 	}
 	return 0;
 }

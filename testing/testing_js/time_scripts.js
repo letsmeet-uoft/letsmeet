@@ -1,5 +1,6 @@
 var tz1 = 0; 
 var tz2 = 0;
+var textTime=" ";
 function myFunction(value, useDaylightTime) {
 	var y = new Date();
 	var n = y.getTimezoneOffset();
