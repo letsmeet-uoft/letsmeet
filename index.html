@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sedna - A Free HTML5/CSS3 website by Peter Finlan</title>
+    <title>ERrrrrrrrr</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -22,7 +22,11 @@
     <link rel="stylesheet" href="css/etline-font.css">
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/signup_style.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/animation_scripts.js"></script>
 </head>
 <body id="top">
     <!--[if lt IE 8]>
@@ -31,8 +35,7 @@
     <section class="hero">
         <section class="navigation">
             <header>
-                <div class="header-content">
-                    
+                <div class="header-content">  
                <div class="logo"><a href="#"><img src="img/logo.png" alt="Sedna logo"></a></div>
                     <div class="header-nav">
                         <nav>
@@ -47,6 +50,34 @@
 
                    <!--         <ul class="member-actions">
                                 <li><a href="#download" class="login">Log in</a></li>
+=======
+                    <div class="logo"><a href="#"><img src="img/sedna-logo.png" alt="Let's Meet Logo"></a></div>
+                    <div class="header-nav">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="#features">About</a></li>
+                                <li><a href="#assets">Contact</a></li>
+                                <!--<li><a href="#blog"></a></li>-->
+                                <!--<li><a href="#download">Download</a></li>-->
+                            </ul>
+                            <ul class="member-actions">
+                                <li><!-- LOGIN BUTTON -->
+                                    <a class="login" data-popup-open="login-popup" href="#Sign up">Login</a>
+                                    <div class = "popup" data-popup= "login-popup">
+                                      <div class= "popup-inner">
+                                        <form action="php/login.php" method="post">
+                                          User name:<br>
+                                          <input type="text" name="username"><br>
+                                          Password:<br>
+                                          <input type="password" name="psw"><br>
+                                          <input type="submit" value="Log in">
+                                        </form>
+                                        <!-- CLOSE -->
+                                        <p><a data-popup-close= "login-popup" href = "#">close</a></p> 
+                                        <a class = "popup-close" data-popup-close="login-popup" href="#">x</a>
+                                      </div>
+                                    </div>
+                                 </li>
                                 <li><a href="#download" class="btn-white btn-small">Sign up</a></li>
                             </ul>
                         </nav>
@@ -300,13 +331,18 @@
                 <div class="col-md-6 col-md-offset-3">
                     <h3>Get started with Sedna, absolutely free</h3>
                     <p>Grab your copy today, exclusively from Codrops</p>
-                    <form class="signup-form" action="#" method="POST" role="form">
+                    <form class="signup-form" action="php/signup.php" method="POST" role="form">
+                        
                         <div class="form-input-group">
-                            <i class="fa fa-envelope"></i><input type="text" class="" placeholder="Enter your email" required>
+                            <i class="fa fa-building"></i><input type="text" name="companyname" class="" placeholder="Enter your company name" required>
                         </div>
                         <div class="form-input-group">
-                            <i class="fa fa-lock"></i><input type="text" class="" placeholder="Enter your password" required>
+                            <i class="fa fa-envelope"></i><input type="text" name="username" class="" placeholder="Enter your email" required>
                         </div>
+                        <div class="form-input-group">
+                            <i class="fa fa-lock"></i><input type="psw" class="" name="psw" placeholder="Enter your password" required>
+                        </div>
+
                         <button type="submit" class="btn-fill sign-up-btn">Sign up for free</button>
                     </form>
                 </div>

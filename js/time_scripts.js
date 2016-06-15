@@ -1,8 +1,5 @@
 var tz1 = 0; 
 var tz2 = 0;
-<<<<<<< HEAD
-var textTime=" ";
-=======
 
 function convertTimeZone2to1(valueTimeZone1, valueTimeZone2, name1, name2) {
 	// if timezone1 is -4 and timezone2 is -11
@@ -54,7 +51,6 @@ function convertTimeZone2to1(valueTimeZone1, valueTimeZone2, name1, name2) {
 }
 
 
->>>>>>> 491554247c74fb4f1d6cc3684094e50857d14147
 function myFunction(value, useDaylightTime) {
 	var y = new Date();
 	var n = y.getTimezoneOffset();
